@@ -245,22 +245,22 @@ let dishes = [
 // //Double Hint: Research 'javascript does array include item'
 // //Filter
 
-// function problemSix(){
+function problemSix(){
 
-//     let results;
-//     results = dishes.filter(function(dish){
-//         if(dish.ingredients.includes("chickpea")){
-//             return true;
-//         } 
-//         else{
-//             return false;
-//         }})
+    let results;
+    results = dishes.filter(function(dish){
+        if(dish.ingredients.includes("chickpea")){
+            return true;
+        } 
+        else{
+            return false;
+        }})
 
-//     return results;
-// }
+    return results;
+}
 
-// let includesChickpea = problemSix();
-// console.log(includesChickpea)
+let includesChickpea = problemSix();
+console.log(includesChickpea)
 
 
 // //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
@@ -287,17 +287,17 @@ let dishes = [
 // //8a. Create a function that will return an array of the cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 // //Map
 
-function problemEight(){
+// function problemEight(){
 
-    let results = dishes.map(     
-        function(dish) { 
-        return dish.cuisine
-    })
-    return results
-}
+//     let results = dishes.map(     
+//         function(dish) { 
+//         return dish.cuisine
+//     })
+//     return results
+// }
 
-let dishCuisines = problemEight();
-console.log(dishCuisines)
+// let dishCuisines = problemEight();
+// console.log(dishCuisines)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
@@ -316,41 +316,26 @@ console.log(dishCuisines)
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
-function problemTen(){
+// function problemTen(){
 
-    let results;
-    results = dishes.filter(function(dish) {
-        if (dish.cuisine === "Vegetarian"){
-            return true; 
-        }else {
-            return false;
-        }})
-
-    let finalResults;
-    finalResults = results.map(function(dish) {
-    return `${dish.cuisine} ${dish.name}`
-    })
-    return finalResults
-    
-}
-
-
-let vegetarianDishes = problemTen();
-console.log(vegetarianDishes)
-
-// function problemTen2(){
-    
 //     let results;
-//     results = dishes.map(function(dish){
+//     results = dishes.filter(function(dish) {
 //         if (dish.cuisine === "Vegetarian"){
-//             console.log(`${dish.cuisine} ${dish.name}`) 
+//             return true; 
 //         }else {
-//     }})
+//             return false;
+//         }})
 
+//     let finalResults;
+//     finalResults = results.map(function(dish) {
+//     return `${dish.cuisine} ${dish.name}`
+//     })
+//     return finalResults
+    
 // }
 
-// let solutionTen = problemTen2();
-// console.log(solutionTen)
+// let vegetarianDishes = problemTen();
+// console.log(vegetarianDishes)
 
 
 
@@ -358,9 +343,48 @@ console.log(vegetarianDishes)
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
 
+// console.log(dishCuisines)
+
+// function problemEightB(){
+
+//     let noDuplicates = [];
+
+//     let results = dishCuisines.filter(function(cuisine){
+//         let isDuplicate = noDuplicates.includes(cuisine);
+
+//         if (!isDuplicate) {
+//             noDuplicates.push(cuisine);
+            
+//             return true;
+//         }
+//             return false;
+//     })
+//     return results
+// }
+
+// let newDishCuisines = problemEightB();
+// console.log(newDishCuisines)
+
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+
+function problemEleven(){
+
+    let results;
+    results = dishes.filter(function(dish){
+        if(dish.ingredients.includes("cheese") || dish.ingredients.includes("tomato")){
+            return true;
+        } 
+        else{
+            return false;
+        }})
+
+    return results;
+}
+
+let newIncludes = problemEleven();
+console.log(newIncludes)
 
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
